@@ -4,9 +4,10 @@ import java.util.Scanner;
 import java.util.HashMap;
 
 public class TraductorJava {
-
+    private static final HashMap<Integer, String> numESP = new HashMap<>();
+    private static final HashMap<Integer, String> numEN = new HashMap<>();
     public static void main(String[] args) {
-        HashMap<Integer, String> numESP = new HashMap<>();
+        
         numESP.put(0, "cero");
         numESP.put(1, "uno");
         numESP.put(2, "dos");
@@ -23,7 +24,20 @@ public class TraductorJava {
         numESP.put(13, "trece");
         numESP.put(14, "catorce");
         numESP.put(15, "quince");
+        numESP.put(16, "dieciseis");
+        numESP.put(17, "diecisiete");
+        numESP.put(18, "dieciocho");
+        numESP.put(19, "diecinueve");
         numESP.put(20, "veinte");
+        numESP.put(21, "veinte");
+        numESP.put(22, "veinte");
+        numESP.put(23, "veinte");
+        numESP.put(24, "veinte");
+        numESP.put(25, "veinte");
+        numESP.put(26, "veinte");
+        numESP.put(27, "veinte");
+        numESP.put(28, "veinte");
+        numESP.put(29, "veinte");
         numESP.put(30, "treinta");
         numESP.put(40, "cuarenta");
         numESP.put(50, "cincuenta");
@@ -34,7 +48,7 @@ public class TraductorJava {
         numESP.put(100, "cien");
         numESP.put(200, "doscientos");
 
-        HashMap<Integer, String> numEN = new HashMap<>();
+        
         numEN.put(0, "zero");
         numEN.put(1, "one");
         numEN.put(2, "two");
@@ -51,6 +65,10 @@ public class TraductorJava {
         numEN.put(13, "thirteen");
         numEN.put(14, "fourteen");
         numEN.put(15, "fifteen");
+        numEN.put(16, "sixteen");
+        numEN.put(17, "seventeen");
+        numEN.put(18, "eighteen");
+        numEN.put(19, "nineteen");
         numEN.put(20, "twenty");
         numEN.put(30, "thirty");
         numEN.put(40, "fourty");
@@ -65,7 +83,33 @@ public class TraductorJava {
         int num1 = sc.nextInt();
         int num2 = sc.nextInt();
         int suma= num1+num2;
+        //convertir(num1);
+        //convertir(num2);
+        //convertir(suma);
+            
+        
         System.out.println("La suma de "+numESP.get(num1)+" más "+numESP.get(num2)+" es "+numESP.get(suma));
         System.out.println("The sum of "+numEN.get(num1)+" plus "+numEN.get(num2)+" is "+numEN.get(suma));
     }
+    
+       /*public static String convertir(int a) {
+        if (a < 20) {
+            return numESP.get(a);
+        } else if (a < 100) {
+            int sobra = a % 10;
+            int sobra2 = a - sobra;
+            //return numESP.get(sobra2) + " y " + numESP.get(sobra);
+            if (sobra == 0) {
+                return numESP.get(sobra2);
+
+            } else {
+                return numESP.get(sobra2) + " y " + numESP.get(sobra);
+            }
+
+        }
+        
+    }
+
+    System.out.println("La suma de "+numESP.get(sobra2)+" más "+numESP.get(num2)+" es "+numESP.get(suma));
+    */
 }
